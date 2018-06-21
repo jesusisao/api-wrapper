@@ -38,7 +38,7 @@ app.get("/postcode/:postcode", function (req, res, next) {
 // 上のとやっていることはさして変わらないが、画像を返す。
 app.get("/yolp/:arg", function (req, res, next) {
     const arg = req.params.arg; // 受け取った、なにかしらの引数。これは例なので適当に書いてる。処理には一切反映されない。
-    const yahooAppId = "dj00aiZpPTVWT2pKb2xuWG5CbyZzPWNvbnN1bWVyc2VjcmV0Jng9YmI-"; // Yahooで登録してIDを取得しないといけない。それをここに書く。
+    const yahooAppId = "dj00aiZpPTVWT2pKb2xuWG5CbyZzPWNvbnN1bWVyc2VjcmV0Jng9YmI-"; // Yahooで登録してこのIDを取得しないといけない。それをここに書く。これは僕のIDなので、試す目的以外で使わないでね！
     const lat = "35.665843055555555"; // 緯度べた書き。
     const lon = "139.7309136111111"; // 経度べた書き。
     // 他のパラメータは面倒なので以下省略。
