@@ -36,13 +36,13 @@ app.get("/postcode/:postcode", function (req, res, next) {
 
 // 例4: 画像を返す。 
 // 上のとやっていることはさして変わらないが、画像を返す。
-app.get("/yolp/:arg", function (req, res, next) {
-    const arg = req.params.arg; // 受け取った、なにかしらの引数。これは例なので適当に書いてる。処理には一切反映されない。
+app.get("/yolp/:yyyymmdd", function (req, res, next) {
+    const yyyymmdd = req.params.yyyymmdd; // 日付を受け取る。
     const yahooAppId = "dj00aiZpPTVWT2pKb2xuWG5CbyZzPWNvbnN1bWVyc2VjcmV0Jng9YmI-"; // Yahooで登録してこのIDを取得しないといけない。それをここに書く。これは僕のIDなので、試す目的以外で使わないでね！
     const lat = "35.665843055555555"; // 緯度べた書き。
     const lon = "139.7309136111111"; // 経度べた書き。
     // 他のパラメータは面倒なので以下省略。
-    const url = "https://map.yahooapis.jp/map/V1/static?appid=" + yahooAppId + "&lat=" + lat + "&lon=" + lon + "&z=11&width=300&height=200&mode=map&overlay=type:rainfall|date:201209011100|datelabel:on&output=jpeg"
+    const url = "https://map.yahooapis.jp/map/V1/static?appid=" + yahooAppId + "&lat=" + lat + "&lon=" + lon + "&z=11&width=300&height=200&mode=map&overlay=type:rainfall|date:" + yyyymmdd + "1200|datelabel:on&output=jpeg"
 
     fetch(url)
         // 結果は画像のバイナリデータとして返ってくる。
