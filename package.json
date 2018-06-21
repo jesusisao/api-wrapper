@@ -1,0 +1,16 @@
+{
+  "name": "api-wrapper",
+  "version": "1.0.0",
+  "description": "説明用API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jesus_isao",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "node-fetch": "^2.1.2"
+  }
+}
